@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\config",
     "\\sceptre",
-    "\\templates"
+    "\\sceptre\\config",
+    "\\sceptre\\templates"
   ],
   "PreviewInSolutionExplorer": false
 }
