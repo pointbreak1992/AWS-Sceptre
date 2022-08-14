@@ -1,0 +1,22 @@
+Description: test demo
+
+Parameters:
+    VPCName:
+        Description: An environment name that is prefixed to resource names
+        Type: String
+
+    CiderBlockIPV4:
+        Description: Please enter the IP range (CIDR notation) for this VPC
+        Type: String
+
+
+Resources:
+    VPC:
+        Type: AWS::EC2::VPC
+        Properties:
+            CidrBlock: !Ref CiderBlockIPV4
+            EnableDnsSupport: true
+            EnableDnsHostnames: true
+            Tags:
+              - Key: Name
+                Value: !Ref VPCName

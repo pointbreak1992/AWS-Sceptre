@@ -1,0 +1,5 @@
+templete_path: vpc.yaml
+
+parameters:
+	CiderBlockIPV4: 10.0.0.0/20
+	VPCName: "Test VPC"
