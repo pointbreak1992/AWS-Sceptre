@@ -20,3 +20,8 @@ Resources:
             Tags:
               - Key: Name
                 Value: !Ref VPCName
+
+Outputs:
+  VPC:
+    Description: A reference to the created VPC
+    Value: !Ref VPC
