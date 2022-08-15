@@ -1,0 +1,25 @@
+Description: Glue demo
+
+Parameters:
+    Scriptlocation:
+        Description: Script location
+        Type: String
+    Name:
+        Description: Name of the Job
+        Type: String
+
+    
+Resources:
+  MyGluejob:
+    Type: AWS::Glue::Job
+    Properties:
+      Command:
+        Name: glueetl
+        ScriptLocation: !Ref Scriptlocation 
+      DefaultArguments:
+        "--job-bookmark-option": "job-bookmark-enable"
+      ExecutionProperty:
+        MaxConcurrentRuns: 2
+      MaxRetries: 0
+      Name: !Ref Name
+      Role: Terra-Role
