@@ -1,0 +1,6 @@
+template:
+  path: glue.yaml
+  type: file
+parameters:
+  Scriptlocation : "s3://narlya-wedding/Arrow.PNG"
+  Name : "PPE-Demo-Job"
